@@ -1,9 +1,13 @@
+package Events;
+
+import Classes.*;
+import Buttons.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class ProdEvent implements ActionListener {
     private ProdButton prodButton;
     private ValueArea valueArea;
-    ProdEvent(ProdButton p, ValueArea v){
+    public ProdEvent(ProdButton p, ValueArea v){
         v.setEditable(true);
         this.prodButton = p;
         this.valueArea = v;

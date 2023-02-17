@@ -1,8 +1,17 @@
+package Classes;
+
+import Buttons.CancelButton;
+import Buttons.PayButton;
+import Buttons.ProdButton;
+import Events.CancleEvent;
+import Events.ProdEvent;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class BackGround extends JFrame {
-    BackGround(){
+public class Main extends JFrame {
+    public static void main(String[] args) {
+        JFrame frame = new Main();
         ValueArea valueArea = new ValueArea();
         valueArea.setEditable(false);
         String[] titles = new String[]{"대학생 4000원", "일반인 5000원", "선택 취소", "결제"};
@@ -11,9 +20,9 @@ public class BackGround extends JFrame {
         price[1] = 5000;
 
         valueArea.setEditable(false);
-        setSize(500, 300);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTitle("Kiosk SoftWare");
+        frame.setSize(500, 300);
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.setTitle("Kiosk SoftWare");
 
         JPanel up_panel = new JPanel();
         JPanel center_panel = new JPanel();
@@ -29,10 +38,9 @@ public class BackGround extends JFrame {
         center_panel.add(cancelButton);
         center_panel.add(payButton);
         down_panel.add(valueArea);
-        this.add(up_panel, BorderLayout.NORTH);
-        this.add(center_panel, BorderLayout.CENTER);
-        this.add(down_panel, BorderLayout.SOUTH);
-
+        frame.add(up_panel, BorderLayout.NORTH);
+        frame.add(center_panel, BorderLayout.CENTER);
+        frame.add(down_panel, BorderLayout.SOUTH);
 
         ProdEvent prodEvent0 = new ProdEvent(button0, valueArea);
         ProdEvent prodEvent1 = new ProdEvent(button1, valueArea);
@@ -41,6 +49,6 @@ public class BackGround extends JFrame {
         button1.addActionListener(prodEvent1);
         cancelButton.addActionListener(cancleEvent);
 
-        setVisible(true);
+        frame.setVisible(true);
     }
 }

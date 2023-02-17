@@ -1,7 +1,9 @@
+package Buttons;
+
 import javax.swing.*;
 
 public class PayButton extends JButton {
-    PayButton(String str) {
+    public PayButton(String str) {
         setText(str);
         setSize(150, 50);
     }

@@ -1,7 +1,9 @@
+package Buttons;
+
 import javax.swing.*;
 
 public class CancelButton extends JButton {
-    CancelButton(String str){
+    public CancelButton(String str){
         setSize(150, 50);
         setText(str);
     }

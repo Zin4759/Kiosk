@@ -1,3 +1,5 @@
+package Buttons;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -6,7 +8,7 @@ public class ProdButton extends JButton {
     private int click;
     private String title;
 
-    ProdButton (int price, String str){
+    public ProdButton(int price, String str){
         this.price = price;
         this.title = str;
         this.setText(this.title);
